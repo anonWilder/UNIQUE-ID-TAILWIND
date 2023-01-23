@@ -1,0 +1,62 @@
+<form method="post" class="bg-white p-6 rounded-lg">
+    {% csrf_token %}
+    <h2 class="text-lg font-medium mb-4">Sign Up</h2>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-medium mb-2" for="username">
+        Username
+      </label>
+      <input
+        class="w-full border border-gray-400 p-2 rounded-lg"
+        type="text"
+        name="username"
+        id="username"
+        required
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-medium mb-2" for="email">
+        Email
+      </label>
+      <input
+        class="w-full border border-gray-400 p-2 rounded-lg"
+        type="email"
+        name="email"
+        id="email"
+        required
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-medium mb-2" for="password">
+        Password
+      </label>
+      <input
+        class="w-full border border-gray-400 p-2 rounded-lg"
+        type="password"
+        name="password"
+        id="password"
+        required
+      />
+    </div>
+    <div class="mb-4">
+      <label class="block text-gray-700 font-medium mb-2" for="unique_number">
+        Unique Number
+      </label>
+      <input
+        class="w-full border border-gray-400 p-2 rounded-lg"
+        type="text"
+        name="unique_number"
+        id="unique_number"
+        value="{{ unique_number }}"
+        readonly
+      />
+    </div>
+    <div class="text-center mt-6">
+      <button
+        class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600"
+        type="submit"
+      >
+        Sign Up
+      </button>
+    </div>
+  </form>
+  
